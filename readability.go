@@ -29,8 +29,13 @@ func main() {
 	S = float64(sentencesNum) / float64(wordsNum) * 100
 
 	index := 0.0588 * L - 0.296 * S - 15.8
+	if index >= 16 {
+	 fmt.Println("Grade: 16+")
+	} else {
+		fmt.Println("Grade: ", int(math.Round(index)))
+	}
 
-	fmt.Println("Grade: ", int(math.Round(index)))
+	
 
 }
 
